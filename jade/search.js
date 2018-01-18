@@ -38,6 +38,12 @@
     });
 
     window.index.add({
+      href: 'http://materializecss.com/carousel.html',
+      title: 'Carousel',
+      body: 'Our Carousel is a robust and versatile component that can be an image slider, to an item carousel, to an onboarding experience.'
+    });
+
+    window.index.add({
       href: 'http://materializecss.com/chips.html',
       title: 'Chips',
       body: 'Chips can be used to represent small blocks of information. They are most commonly used either for contacts or for tags.'
@@ -71,6 +77,12 @@
       href: 'http://materializecss.com/dropdown.html',
       title: 'dropdown',
       body: 'Add a dropdown list to any button.'
+    });
+
+    window.index.add({
+      href: 'http://materializecss.com/feature-discovery.html',
+      title: 'feature discovery',
+      body: 'Provide value and encourage return visits by introducing users to new features and functionality at contextually relevant moments.'
     });
 
     window.index.add({
@@ -161,6 +173,12 @@
       href: 'http://materializecss.com/preloader.html',
       title: 'preloader',
       body: 'If you have content that will take a long time to load, you should give the user feedback. For this reason we provide a number activity + progress indicators.'
+    });
+
+    window.index.add({
+      href: 'http://materializecss.com/pulse.html',
+      title: 'pulse',
+      body: 'Draw attention to your buttons with this subtle but captivating effect.'
     });
 
     window.index.add({
@@ -273,7 +291,7 @@
       }
     });
 
-    $('input#search').bind('keyup', debounce(function (e) {
+    $('input#search').on('keyup', debounce(function (e) {
       if ($(this).val() < 2) {
         renderResults([]);
         return;
@@ -290,7 +308,7 @@
     }));
 
 
-    $('input#search').bind('keydown', debounce(function (e) {
+    $('input#search').on('keydown', debounce(function (e) {
       // Escape.
       if (e.keyCode === 27) {
         $(this).val('');
